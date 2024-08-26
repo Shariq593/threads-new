@@ -1,0 +1,13 @@
+1) download Nodejs from  https://nodejs.org/en
+2) open terminal and run these code in backend
+  -    npm install express jsonwebtoken bcyptjs dotenv mongoose cookie-parse cloudinary
+3) run this too in frontend
+  npm install -D nodemon
+  npm i @chakra-ui/react
+  npm install @chakra-ui/icons
+  npm npm i date-fns
+
+4) get the .env file from me, and move it to the backend folder
+5) open 2 terminals and navigate to backend and frontend respectively
+    and run `npm run dev` in both of the terminal
+6) open http://localhost:3000/ in browser
