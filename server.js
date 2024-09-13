@@ -15,7 +15,7 @@ connectDB();
 const app = express();
 const PORT = process.env.PORT || 4000
 
-app(
+app.use(
   cors({
     origin:
       process.env.ENVIRONMENT === "Local"
