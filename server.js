@@ -5,7 +5,7 @@ import userRoutes from "./Routes/userRoutes.js"
 import connectDB from "./db/connectDB.js";
 import postRoutes from "./Routes/postRoutes.js"
 import {v2 as cloudinary} from "cloudinary"
-
+import cors from "cors";
 
 
 
@@ -15,6 +15,14 @@ connectDB();
 const app = express();
 const PORT = process.env.PORT || 4000
 
+app(
+  cors({
+    origin:
+      process.env.ENVIRONMENT === "Local"
+        ? "http://localhost:3000"
+        : process.env.FRONTEND_URL,
+  })
+);
 
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
