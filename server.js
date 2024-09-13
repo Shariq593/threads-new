@@ -6,7 +6,7 @@ import connectDB from "./db/connectDB.js";
 import postRoutes from "./Routes/postRoutes.js"
 import {v2 as cloudinary} from "cloudinary"
 import cors from "cors";
-
+import helmet from "helmet";
 
 
 dotenv.config() //to read the env file
@@ -15,6 +15,7 @@ connectDB();
 const app = express();
 const PORT = process.env.PORT || 4000
 
+app.use(helmet());
 app.use(
   cors({
     origin:
